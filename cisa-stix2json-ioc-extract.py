@@ -98,10 +98,11 @@ if __name__ == '__main__':
   # positional tuple gran domain_list fro return
   domains = ioc_extract(args.url) [0]
   # write buffer to file:
-  file_handle = open('cisa_domain_dnsb1.txt', 'a')
-  for i in domains:
-    file_handle.write(i)
-    file_handle.close()
+  #file_handle = open('cisa_domain_dnsb1.txt', 'a')
+  with open('cisa_domain_dnsb1.txt', 'a') as file_handle:
+    for i in domains:
+      file_handle.write(f"{i}\n")
+      #file_handle.close()
 
   #url_arg = args.url
   #call ioc extractor func
