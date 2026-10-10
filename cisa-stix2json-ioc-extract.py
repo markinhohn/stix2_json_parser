@@ -94,6 +94,7 @@ if __name__ == '__main__':
                     epilog='Usage: python3 cisa-stix2json-ioc-extract.py -url "https://cisa.gov/foo/something.json"'
                     )   
   parser.add_argument('-url', type=str, help='use stix2json formatted url')
+  parser.add_argument('-OutFile', type=str, help='name of ourput file')
   args = parser.parse_args()
   # positional tuple gran domain_list fro return
   domains = ioc_extract(args.url) [0]
